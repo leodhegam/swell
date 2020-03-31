@@ -1,0 +1,21 @@
+{
+  "name": "sweel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "leodhegam <leodhegam@ufrn.edu.br>",
+  "license": "MIT",
+  "scripts": {
+    "commit": "git-cz"
+  },
+  "dependencies": {
+    "commitizen": "^4.0.3"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "3.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
