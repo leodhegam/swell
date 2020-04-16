@@ -26,11 +26,21 @@ export const Content = styled.div`
     height: 150px;
   }
   form {
+    animation: fade 0.5s;
+    overflow: hidden;
     background: #2f4a82;
     display: flex;
     flex-direction: column;
     padding: 20px;
 
+    .input-block:nth-child(1) {
+      animation: move 1s;
+    }
+    .input-block:nth-child(2) {
+      animation: move 1s;
+      animation-delay: 550ms;
+      animation-fill-mode: backwards;
+    }
     input {
       background: rgba(0, 0, 0, 0.1);
       border: 0;
@@ -75,6 +85,26 @@ export const Content = styled.div`
       &:hover {
         opacity: 1;
       }
+    }
+  }
+  @keyframes move {
+    from {
+      opacity: 0;
+      transform: translateX(-35%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+  @keyframes fade {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale (1);
     }
   }
 `;

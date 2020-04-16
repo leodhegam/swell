@@ -24,8 +24,18 @@ export default function SignIn() {
     <>
       <img src={logo} alt="Swell" />
       <Form schema={schema} onSubmit={handleSubmit}>
-        <Input name="email" type="email" placeholder="Seu email" />
-        <Input name="password" type="password" placeholder="Sua senha" />
+        <Input
+          className="input-block"
+          name="email"
+          type="email"
+          placeholder="Seu email"
+        />
+        <Input
+          className="input-block"
+          name="password"
+          type="password"
+          placeholder="Sua senha"
+        />
 
         <button type="submit">{loading ? 'Carregando' : 'Acessar'}</button>
         <Link to="/register">Criar conta gratuita</Link>
