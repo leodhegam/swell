@@ -12,7 +12,8 @@ export default function Header() {
       <Content>
         <nav>
           <img src={logo} alt="Swell" />
-          <Link to="/dashboard">DASHBOARD</Link>
+          <Link to="/dashboard">FEED</Link>
+          <Link to="/posts">USERS</Link>
         </nav>
         <aside>
           <Profile>

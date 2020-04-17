@@ -16,7 +16,9 @@ export const Content = styled.div`
   nav {
     display: flex;
     align-items: center;
-
+    a {
+      margin:10px;
+    }
     img {
       width: 60px;
       height: 70px;

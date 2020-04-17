@@ -1,30 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import api from '~/services/api';
-import { Container,Content } from './styles';
+import { Container } from './styles';
 
 export default function Dashboard() {
   const [user, setUser] = useState([]);
-  const [post, setPost] = useState([]);
   useEffect(() => {
     api.get('users').then((response) => {
       setUser(response.data);
     });
   }, []);
-  useEffect(() => {
-    api.get('posts').then((response) => {
-      setPost(response.data);
-    });
-  }, []);
   return (
     <>
       <Container>
-        <Content>
-        <strong>
-          Publique algo
-        </strong>
-        <textarea rows="4" cols="40" placeholder="Digite algo"></textarea>
-        <button type="submit">Publicar</button>
-        </Content>
         <main>
           <ul>
             {user.map((users) => (
@@ -37,7 +24,13 @@ export default function Dashboard() {
                     }
                     alt=""
                   />
-                {/* TODO */}
+                  <div>
+                    <strong>{users.name}</strong>
+                    <span>
+                      {users.uf} / {users.city} | {users.age} anos
+                    </span>
+                    <span>{users.bio}</span>
+                  </div>
                 </header>
               </li>
             ))}

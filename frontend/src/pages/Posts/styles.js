@@ -66,34 +66,34 @@ export const Container = styled.div`
     }
   }
 `;
-export const Content = styled.aside`
-  textarea {
-    resize: none;
-    padding: 10px;
-    line-height: 1.5;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-shadow: 1px 1px 1px #999;
-  }
+// export const Content = styled.aside`
+//   textarea {
+//     resize: none;
+//     padding: 10px;
+//     line-height: 1.5;
+//     border-radius: 5px;
+//     border: 1px solid #ccc;
+//     box-shadow: 1px 1px 1px #999;
+//   }
 
-  strong {
-    color: #fff;
-    display: block;
-    margin-bottom: 10px;
-  }
-  button {
-    display: block;
-    border: 1px solid #3498db;
-    background: none;
-    padding: 7px 12px;
-    font-size: 14px;
-    margin: 10px;
-    color: #fff;
-    transition: 0.5s;
-    position: relative;
-    overflow: hidden;
-    &:hover {
-      opacity: 0.7;
-    }
-  }
-`;
+//   strong {
+//     color: #fff;
+//     display: block;
+//     margin-bottom: 10px;
+//   }
+//   button {
+//     display: block;
+//     border: 1px solid #3498db;
+//     background: none;
+//     padding: 7px 12px;
+//     font-size: 14px;
+//     margin: 10px;
+//     color: #fff;
+//     transition: 0.5s;
+//     position: relative;
+//     overflow: hidden;
+//     &:hover {
+//       opacity: 0.7;
+//     }
+//   }
+// `;
