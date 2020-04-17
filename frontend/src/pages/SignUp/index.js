@@ -6,6 +6,7 @@ import * as Yup from 'yup';
 import logo from '~/assets/wav.png';
 // import { Container } from './styles';
 import { signUpRequest } from '~/store/modules/auth/actions';
+import { Container } from '~/components/Header/styles';
 
 const schema = Yup.object().shape({
   name: Yup.string().required('O nome é obrigatório'),
@@ -29,24 +30,26 @@ export default function SignUp() {
   }
   return (
     <>
-      <img src={logo} alt="Swell" />
-      <Form schema={schema} onSubmit={handleSubmit}>
-        <Input name="name" placeholder="Seu nome completo" />
-        <Input name="email" type="email" placeholder="Seu email" />
-        <Input
-          name="age"
-          type="number"
-          min="0"
-          max="100"
-          placeholder="Sua idade"
-        />
-        <Input name="city" placeholder="Cidade" />
-        <Input name="uf" placeholder="UF" />
-        <Input name="password" type="password" placeholder="Sua senha" />
+      <Container>
+        <img src={logo} alt="Swell" />
+        <Form schema={schema} onSubmit={handleSubmit}>
+          <Input name="name" placeholder="Seu nome completo" />
+          <Input name="email" type="email" placeholder="Seu email" />
+          <Input
+            name="age"
+            type="number"
+            min="0"
+            max="100"
+            placeholder="Sua idade"
+          />
+          <Input name="city" placeholder="Cidade" />
+          <Input name="uf" placeholder="UF" />
+          <Input name="password" type="password" placeholder="Sua senha" />
 
-        <button type="submit">Criar conta</button>
-        <Link to="/">Ja tenho login</Link>
-      </Form>
+          <button type="submit">Criar conta</button>
+          <Link to="/">Ja tenho login</Link>
+        </Form>
+      </Container>
     </>
   );
 }

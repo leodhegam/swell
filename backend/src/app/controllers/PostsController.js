@@ -31,8 +31,8 @@ class FileController {
 
   async store(req, res) {
     const schema = Yup.object().shape({
-      user_id: Yup.number().required(),
-      date: Yup.date().required(),
+      user_id: Yup.number(),
+      date: Yup.date().notRequired(),
       title: Yup.string().required(),
       content: Yup.string().required(),
     });

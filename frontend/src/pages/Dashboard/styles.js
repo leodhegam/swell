@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  
   margin: 0 auto;
   padding: 60px 30px;
   margin-top: 3px;
@@ -27,18 +26,22 @@ export const Container = styled.div`
         align-items: center;
         div {
           margin-left: 10px;
-          strong {
-            display: block;
-            font-size: 16px;
-            color: #333;
-          }
-          span {
-            text-transform: uppercase;
-            font-size: 13px;
-            color: #999;
-            margin-top: 2px;
-          }
         }
+        strong {
+          display: block;
+          font-size: 16px;
+          color: #333;
+
+          margin-bottom: 10px;
+        }
+        span {
+          display: block;
+          text-transform: uppercase;
+          font-size: 13px;
+          color: #999;
+          margin-top: 2px;
+        }
+
         img {
           width: 54px;
           height: 54px;
@@ -67,7 +70,10 @@ export const Container = styled.div`
   }
 `;
 export const Content = styled.aside`
-  textarea {
+  input {
+    padding: 10px;
+    margin: 7px;
+    display: block;
     resize: none;
     padding: 10px;
     line-height: 1.5;
@@ -89,10 +95,11 @@ export const Content = styled.aside`
     font-size: 14px;
     margin: 10px;
     color: #fff;
-    transition: 0.5s;
+    transition: 0.8s;
     position: relative;
     overflow: hidden;
     &:hover {
+      background: #3498db;
       opacity: 0.7;
     }
   }
